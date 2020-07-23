@@ -1,4 +1,4 @@
-%% Code 7-7 | Adams-Bashforth Method
+% Code 6-7 | Adams-Bashforth Method
 %           | +[ using runge_kutta.m based on Code 7-3,7-4 & 7-5 ]
 clc; clear; close all
 f = @(x,Y) [Y(2); -0.1*Y(2)-x];           %ODE

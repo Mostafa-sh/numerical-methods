@@ -1,4 +1,4 @@
-%% Code 7-2 | Midpiont Method
+% Code 6-1a | Euler's Explicit Method
 clc; clear; close all
 f = @(x,Y) [Y(2); -0.1*Y(2)-x];           %ODE
 Y = [0 1];                                %initial values
@@ -11,7 +11,7 @@ i = 1;
 xx = x; YY = Y;
 while x < S(2)
     i = i+1;
-    Y = Y+f(x+h/2,Y+f(x,Y)*h/2)*h;
+    Y = Y+f(x,Y)*h;
     x = x+h;
     xx(i) = x; YY(:,i) = Y;
 end

@@ -1,4 +1,4 @@
-%% Code 7-8 | Adams-Bashforth Method (Implicit)
+% Code 6-8 | Adams-Bashforth Method (Implicit)
 %           | +[ using runge_kutta.m based on Code 7-3,7-4 & 7-5 ]
 %           | +[ using newton.m based on Code 2-8 ]
 clc; clear; close all

@@ -1,4 +1,4 @@
-%% Code 7-9 | Newmark Method
+% Code 6-9 | Newmark Method
 clc; clear
 M = diag([100,10,10]);                  %mass matrix
 K = 1000*[8 -4 0; -4 8 -4; 0 -4 4];     %stiffness matrix

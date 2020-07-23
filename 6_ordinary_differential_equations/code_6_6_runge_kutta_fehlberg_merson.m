@@ -1,4 +1,4 @@
-%% Code 7-6 | Runge-Kutta Fehlberg Merson Method
+% Code 6-6 | Runge-Kutta Fehlberg/Merson Method
 clc; clear; close all
 f = @(x,Y) [Y(2); -0.1*Y(2)-x];           %ODE
 Y = [0 1];                                %initial values

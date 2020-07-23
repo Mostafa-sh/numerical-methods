@@ -1,16 +1,14 @@
-%% Code 7-3 | Second Order Runge-Kutta Method
+% Code 6-5 | Forth Order Runge-Kutta Method
 clc; clear; close all
 f = @(x,Y) [Y(2); -0.1*Y(2)-x];           %ODE
 Y = [0 1];                                %initial values
 S = [0 2];                                %response span
 h = 0.25;                                 %domain increment
-type = 'Ralston';
 %Metod__________________________________________________________________
-switch type
-    case 'MEuler',   a2 = 1;   b21 = 1;   c1 = 1/2; c2 = 1/2;
-    case 'Midpoint', a2 = 1/2; b21 = 1/2; c1 = 0;   c2 = 1;
-    case 'Ralston',  a2 = 3/4; b21 = 3/4; c1 = 1/3; c2 = 2/3;
-end
+a2 = 1/2; b21 = 1/2;
+a3 = 1/2; b31 = 0;   b32 = 1/2;
+a4= 1;    b41 = 0;   b42 = 0;   b43 = 1;
+c1 = 1/6; c2 = 1/3;  c3 = 1/3;  c4 = 1/6;
 x = S(1);
 Y = Y(:);
 i = 1;
@@ -19,7 +17,9 @@ while x < S(2)
     i = i+1;
     K1 = f(x,Y);
     K2 = f(x+a2*h,Y+b21*K1*h);
-    Y = Y+(c1*K1+c2*K2)*h;
+    K3 = f(x+a3*h,Y+(b31*K1+b32*K2)*h);
+    K4 = f(x+a4*h,Y+(b41*K1+b42*K2+b43*K3)*h);
+    Y = Y+(c1*K1+c2*K2+c3*K3+c4*K4)*h;
     x = x+h;
     xx(i) = x; YY(:,i) = Y;
 end
