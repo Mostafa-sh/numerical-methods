@@ -3,8 +3,8 @@
 #### A collection of numerical methods in MATLAB:
 
 1. Solving systems of linear equations
-    1.1. Gaussian elimination
-    1.2. Doolittle decomposition
+    1. 1. Gaussian elimination
+    1. 2. Doolittle decomposition
     1.3. Crout decomposition
     1.4. Cholesky decomposition
     1.5. Gauss-Jordan elimination
