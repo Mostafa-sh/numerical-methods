@@ -1,8 +1,8 @@
-%% Code 5-6 | Gauss-Laguerre (0 to inf)
+% Code 5-6 | Gauss-Laguerre (0 to inf)
 clc; clear
 n = 2:6;                            %number of grid points
 f = @(x) 1./(x.^2+1);               %function
-%Metod__________________________________________________________________
+%Method__________________________________________________________________
 nn = numel(n); I = zeros(1,nn);
 for i = 1:nn
     switch n(i)

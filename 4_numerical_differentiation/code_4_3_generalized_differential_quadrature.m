@@ -1,5 +1,5 @@
-%% Code 4-3 |  Generalized Differential Quadrature method (GDQ) Method
-%           |  (chebyshev grid recommanded) +[ using chebspace.m ]
+% Code 4-3 |  Generalized Differential Quadrature method (GDQ) Method
+%          |  (chebyshev grid recommanded) +[ using chebspace.m ]
 clc; clear
 x = sym('x');                          %for validation
 f = x^2*sin(x)+exp(x);                 %function for validation
@@ -7,7 +7,7 @@ n = 20;
 X = chebspace(-2,2,n);                 %chebyshev grid
 F = eval(subs(f,X));                   %function numerical data
 r = 6;                                 %upto n-1
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 X = X(:);
 dX = bsxfun(@minus,X,X.')+eye(n);
 Pai = prod(dX,2);

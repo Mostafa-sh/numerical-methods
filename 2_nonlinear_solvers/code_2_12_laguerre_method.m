@@ -1,9 +1,9 @@
-%% Code 2-12 | Laguerre's Method: Polynomial Root-Finding, (Real & Complex)
+% Code 2-12 | Laguerre's Method: Polynomial Root-Finding, (Real & Complex)
 clc; clear
 A = [2i,0.4,12+12i,9]; % p(x)=A(1)*x^(n-1)+A(2)*x^(n-2)+...+A(n-1)*x+A(n)
 itr0 = 50;             % maximum itration
 error = 1e-9;
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 A = fliplr(A);              % from A(n) ro A(1)
 n = numel(A)-1;             % number of the roots
 roots = zeros(n,1);         % roots   

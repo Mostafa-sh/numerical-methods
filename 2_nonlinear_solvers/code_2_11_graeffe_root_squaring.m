@@ -1,11 +1,11 @@
-%% Code 2-11 | Graeffe's Root Squaring Method: Polynomial Root-Finding         
-%            | (works well if all roots are real)
-%            | todo: redundant calculations, can be improved
+% Code 2-11 | Graeffe's Root Squaring Method: Polynomial Root-Finding         
+%           | (works well if all roots are real)
+%           | todo: redundant calculations, can be improved
 clc; clear
 A = [1,2,-15,2];  % p(x)=A(1)*x^(n-1)+A(2)*x^(n-2)+...+A(n-1)*x+A(n)
 itr = 100;        % maximum itration
 error = 1e-9;
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 As = A;
 A = fliplr(A);  
 n = numel(A);

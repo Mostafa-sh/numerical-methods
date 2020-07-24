@@ -1,12 +1,12 @@
-%% Code 5-9 | Integration using Taylor & DQ (chebyshev grid recommanded)
-%           | +[ using chebspace.m & gdq.m ] (I came up with this!)
+% Code 5-9 | Integration using Taylor & DQ (chebyshev grid recommanded)
+%          | +[ using chebspace.m & gdq.m ] (I came up with this!)
 clc; clear
 x = sym('x');                       %for validation
 f = x/(x^2-2*x+2);                  %function for validation
 n = 11;
 X = chebspace(1,pi,n);              %chebyshev grid
 F = eval(subs(f,X));                %function numerical data
-%Metod__________________________________________________________________
+%Method__________________________________________________________________
 X = X(:);
 X1 = [X(2:end);X(end)];
 X0 = [X(1);X(1:end-1)];

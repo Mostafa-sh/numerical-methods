@@ -1,11 +1,11 @@
-%% Code 2-2 | Bisection Method
+% Code 2-2 | Bisection Method
 clc; clear
 f = @(x) x^2-exp(-x);           %function
 a = 0;                          %left  limit
 b = 1;                          %right limit
 error   = 1e-4;
 itr = 20;                       %maximum itration
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 fa = f(a); fb = f(b);
 for i = 1:itr
     r  = (a+b)/2;    fr = f(r);

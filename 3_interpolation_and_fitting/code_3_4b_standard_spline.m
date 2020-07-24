@@ -1,10 +1,10 @@
-%% Code 3-4b | Standard Spline
+% Code 3-4b | Standard Spline
 clc; clear; close all
 k = 2;                                 %order of Spline 1,2,3
 X = [-0.2, -0.1, 0.2, 0.7, 1.5];       %data points
 F = [5.2, 3, 0.6, 0.4, 0.2].';         %data points
 Xi = linspace(X(1),X(end),30);         %interpolation points
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 k1 = k+1;
 n = numel(X);
 O1 = ones(1,2*k1);

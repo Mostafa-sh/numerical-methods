@@ -1,12 +1,12 @@
-%% code 5-11 | Fredholm Integration (chebyshev grid recommanded)
-%            | +[ using gdq.m & tiq.m based on Code 5-9 ]
+% code 5-11 | Fredholm Integration (chebyshev grid recommanded)
+%           | +[ using gdq.m & tiq.m based on Code 5-9 ]
 clc; clear
 x = sym('x');                       %for validation
 f = x/(x^2-2*x+2);                  %function for validatoin
 n = 21;
 X = chebspace(1,pi,n);              %chebyshev grid
 F = eval(subs(f,X));                %function numerical data
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 n = numel(X);
 S = tiq(X);
 D = gdq(X,2);

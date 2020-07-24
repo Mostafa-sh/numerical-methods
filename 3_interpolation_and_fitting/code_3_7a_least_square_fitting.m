@@ -1,9 +1,9 @@
-%% Code 3-7a | Least Square Fitting
+% Code 3-7a | Least Square Fitting
 clc; clear; close all
 X = [2 5 6 8 9 13];       %Data points
 Y = [7 8 10 11 12 14];    %Data points
 m = 5;                %number of polynomial base functions <= numel(X)
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 X = X(:); Y = Y(:);
 B = bsxfun(@power,X,0:m-1);
 [U,S,V] = svd(B);

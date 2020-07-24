@@ -1,8 +1,8 @@
-%% Code 1-4 | Modified Choleski's Decomposition (for symmetric systems)
+% Code 1-4 | Modified Choleski's Decomposition (for symmetric systems)
 clc; clear
 A = [-2 1 1; 1 2 1; 1 1 -2];                % must be symmetric
 B = [0; 1; -4];
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 [n,m] = size(B);
 Z = zeros(n,m);
 L = eye(n);

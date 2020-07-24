@@ -5,7 +5,7 @@ Y = [0 1];                                %initial values
 S = [0 2];                                %response span
 h = 0.25;                                 %domain increment
 type = 'Merson';
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 switch type
     case 'Felberg4'
         a2 = 1/4;   b21 = 1/4;

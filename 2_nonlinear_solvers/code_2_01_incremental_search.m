@@ -1,9 +1,9 @@
-%% Code 2-1 | Incremental Search Method
+% Code 2-1 | Incremental Search Method
 clc; clear
 f = @(x) 2*x^4 - 12*x^2 + 7;         %function
 x1 = 0;                              %start point
 dx = 0.1;                            %search increment
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 f1 = f(x1);
 x2 = x1 + dx;  f2 = f(x2);
 i = 2; Tab = [x1, x2; f1, f2];       %for illustration

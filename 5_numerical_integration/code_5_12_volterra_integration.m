@@ -1,12 +1,12 @@
-%% code 5-12 | Volterra Integration (chebyshev grid recommanded)
-%            | +[ using tiq.m based on Code 5-9 ]
+% code 5-12 | Volterra Integration (chebyshev grid recommanded)
+%           | +[ using tiq.m based on Code 5-9 ]
 clc; clear
 x = sym('x');                       %for validation
 f = sin(x);                         %function for validatoin
 n = 21;
 X = chebspace(0,2*pi,n);            %chebyshev grid
 F = eval(subs(f,X));                %function numerical data
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 n = numel(X);
 S = zeros(n);
 for i = 2:n, J = 1:i;

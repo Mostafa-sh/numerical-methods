@@ -1,11 +1,11 @@
-%% Code 2-7 | Fixed Point Method - Systems of Equations
+% Code 2-7 | Fixed Point Method - Systems of Equations
 clc; clear
 g = @(x) [(20-4/3*(x(2)^2))^(1/3);         %f(x) = g(x)-x
     (26+1/4*(x(1)^2))^(1/3)];
 X = [1; 1];                                %start points
 error = 3e-4;
 itr = 100;                                 %maximum itration
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 for i = 1:itr
     Gx = g(X); Fx = Gx-X;
     Tab(i,:) = [i-1, X.', Fx.'];           %for illustration

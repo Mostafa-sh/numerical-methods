@@ -1,5 +1,5 @@
-%% code 4-5 | Periodic Grid Method (only periodic data)
-%           | +[ using periodspace.m ]
+% code 4-5 | Periodic Grid Method (only periodic data)
+%          | +[ using periodspace.m ]
 clc; clear
 x = sym('x');                    %for validation
 f = sin(2*x)+cos(3*x);           %periodic function for validation
@@ -7,7 +7,7 @@ n = 20;                          %2*k, must be even.
 X = periodspace(0,2*pi,n);       %peridic grid (on period span)
 F = eval(subs(f,X));             %periodic numerical data
 r = 6;                           %maximum order of derivatives
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 lx = n*(X(2)-X(1)); h = 2*pi/n; k = 2*pi/lx; %mapping
 I = 1:n-1;
 C1 = [0 .5*(-1).^I.*cot(I*h/2)];

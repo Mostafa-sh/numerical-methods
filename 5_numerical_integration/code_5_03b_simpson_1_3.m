@@ -1,10 +1,10 @@
-%% Code 5-3a | Simpson 1/3 Rule (non-uniform, odd grid)
+% Code 5-3a | Simpson 1/3 Rule (non-uniform, odd grid)
 clc; clear
 x = sym('x');                       %for validation
 f = sqrt(4-x^2);                    %function for validation
 X = [0 0.75 1.25 1.75 2];           %non-uniform 2K+1, K>=1
 F = eval(subs(f,X));
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 n = numel(X); k = 3; m = (n-1)/2;
 O = ones(1,k);
 id = (1:k)'*ones(1,m)+O'*(0:(k-1):(k-1)*(m-1));

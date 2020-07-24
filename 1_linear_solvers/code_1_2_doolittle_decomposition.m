@@ -1,8 +1,8 @@
-%% Code 1-2 | Doolittle1e's Decomposition
+% Code 1-2 | Doolittle's Decomposition
 clc; clear
 A = [2 1 4 -2; -3 4 2 -1; 3 5 -2 1; -2 3 2 4];
 B = [19; 1; 8 ; 13];
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 [n,m] = size(B);
 Z = zeros(n,m);
 L = eye(n);

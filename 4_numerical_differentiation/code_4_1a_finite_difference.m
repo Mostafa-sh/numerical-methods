@@ -1,12 +1,12 @@
-%% Code 4-1a | Finite Difference Method (uniform grid)
-%            | +[ using fd_operator.m ]
+% Code 4-1a | Finite Difference Method (uniform grid)
+%           | +[ using fd_operator.m ]
 clc; clear;
 x = sym('x');                          %for validation
 f = x^2*sin(x)+exp(x);                 %function for validation
 n = 20;
 X = linspace(-2,2,n);
 F = eval(subs(f,X));                   %function numerical data
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 F = F(:);
 h = X(2)-X(1);
 fd = 0.5/h*[-3  4 -1];              %forward

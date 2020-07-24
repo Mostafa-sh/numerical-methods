@@ -1,11 +1,11 @@
-%% Code 1-6 | Jacobi Method
+% Code 1-6 | Jacobi Method
 clc; clear
 A = [3 0 -1; 0 4 -2; -1 -2 5];
 B = [4; 10; -10];
 X = [0;0;0];                %in initial guess size(X) = size(B)
 error = 1e-4;
 itr = 100;
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 n = size(B,1);
 d = diag(A);
 A = eye(n)- bsxfun(@rdivide,A,d);

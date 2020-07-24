@@ -1,6 +1,6 @@
 % Code 6-8 | Adams-Bashforth Method (Implicit)
-%           | +[ using runge_kutta.m based on Code 7-3,7-4 & 7-5 ]
-%           | +[ using newton.m based on Code 2-8 ]
+%          | +[ using runge_kutta.m based on Code 7-3,7-4 & 7-5 ]
+%          | +[ using newton.m based on Code 2-8 ]
 clc; clear; close all
 f = @(x,Y) [Y(2); -0.1*Y(2)-x];           %ODE
 Y = [0 1];                                %initial values
@@ -11,7 +11,7 @@ n = 4;                                    %order of Adams-Bashforth method
 er = 1e-5;                                %percision of Newton method
 itr = 20;                                 %maximum iteration of Newton
 d = 1e-5;                                 %Jacobina increment of Newton
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 [xx,YY] = runge_kutta(f,Y,S(1)+[0,(n-2)*h],h,r);
 i = n-1;
 switch n

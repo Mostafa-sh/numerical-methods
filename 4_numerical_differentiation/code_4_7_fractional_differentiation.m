@@ -1,10 +1,10 @@
-%% Code 4-7 | Fractional Differentiation (uniform grid)
+% Code 4-7 | Fractional Differentiation (uniform grid)
 clc; clear
 n = 10;                                
 X = linspace(0,2,n);                   %uniform grid
 F = 5*exp(4*X);                        %function numerical data
 r = 0.5;                               %fractional derivative order r<1
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 h = X(2)-X(1);
 J = 1:n-1;
 B = J.^(1-r)-(J-1).^(1-r);

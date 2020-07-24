@@ -5,7 +5,7 @@ Y = [0 1];                                %initial values
 S = [0 2];                                %response span
 h = 0.25;                                 %domain increment
 type = 'Classic';
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 switch type
     case 'Classic'
         a2 = 1/2; b21 = 1/2; a3 = 1 ;  b31 = -1; b32 = 2;

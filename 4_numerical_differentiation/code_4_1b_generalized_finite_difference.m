@@ -1,5 +1,5 @@
-%% Code 4-1b | Finite Difference Method General Approach (uniform grid)
-%            | +[ using fd_operator.m ]
+% Code 4-1b | Finite Difference Method General Approach (uniform grid)
+%           | +[ using fd_operator.m ]
 clc; clear
 x = sym('x');                          %for validation
 f = x^2*sin(x)+exp(x);                 %function for validation
@@ -8,7 +8,7 @@ X = linspace(-2,2,n);
 F = eval(subs(f,X));                   %function numerical data
 m = 7;                                 %odd number < numel(X)
 r = 3;                                 %derivative order <= m-1
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 h = X(2)-X(1);                         %just uiform
 C = (1:m).';                           %generating m*m fd operator
 P = 0:m-1; 

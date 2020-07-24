@@ -1,5 +1,5 @@
-%% Code 4-4 | Differentiation in 2D (Chebyshev Grid Recommanded)
-%           | +[ using chebspace.m and gdq.m based on Code 4-3 ]
+% Code 4-4 | Differentiation in 2D (Chebyshev Grid Recommanded)
+%          | +[ using chebspace.m and gdq.m based on Code 4-3 ]
 clc; clear
 x = sym('x'); y = sym('y');        %for validation
 f = (x^2)*y + sin(x*y) + x*exp(y); %2D function for validation
@@ -9,7 +9,7 @@ Y = chebspace(0,1,n(2));           %chebyshev grid
 [XX,YY] = ndgrid(X,Y);             %2D grid
 FF = eval(subs(f,{x,y},{XX,YY}));  %function numerical data
 r = [3 2];                         %order of derivatives in[x,y] direction
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 F = FF(:);
 Dx = gdq(X,r(1));
 Dy = gdq(Y,r(2));

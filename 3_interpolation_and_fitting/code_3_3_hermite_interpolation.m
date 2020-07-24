@@ -1,5 +1,5 @@
-%% Code 3-3 | Hermite Interpolation
-%           | (chebyshev grid recommanded)+[ using chebspace.m ]
+% Code 3-3 | Hermite Interpolation
+%          | (chebyshev grid recommanded)+[ using chebspace.m ]
 clc; clear; close all
 x = sym('x');                           %for validation
 f = exp(x/2)*cos(2*x)*x;                %function for validation
@@ -8,7 +8,7 @@ X = chebspace(-3,1,8);                  %initial points
 Xi = chebspace(X(1),X(end),40);         %interpolation points
 F = eval(subs(f,X)).';                  %function numerical data
 dF = eval(subs(fx,X)).';                %function numerical data
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 X = X(:); Xi = Xi(:);
 n = numel(X); m = numel(Xi);
 dX  = bsxfun(@minus,X ,X.')+eye(numel(X));

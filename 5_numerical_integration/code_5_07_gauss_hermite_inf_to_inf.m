@@ -1,8 +1,8 @@
-%% Code 5-7 | Gauss-Hermite (-inf to inf)
+% Code 5-7 | Gauss-Hermite (-inf to inf)
 clc; clear
 n = 2:6;                                 %number of grid points
 f = @(x) (2*x.^2+1)./(x.^2+1)./(1+x.^4); %function
-%Metod__________________________________________________________________
+%Method__________________________________________________________________
 nn = numel(n); I = zeros(1,nn);
 for i = 1:nn
     switch n(i)

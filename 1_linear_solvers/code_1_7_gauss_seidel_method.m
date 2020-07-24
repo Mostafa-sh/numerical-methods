@@ -1,9 +1,9 @@
-%% Code 1-7 | Gauss-Seidel Method
+% Code 1-7 | Gauss-Seidel Method
 clc; clear
 A = [3 0 -1; 0 4 -2; -1 -2 5];
 B = [4; 10; -10];
 X = [0;0;0];                          %in initial guess size(X) = size(B)
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 n = numel(X);
 itr = 100;
 error = 1e-4;

@@ -1,5 +1,5 @@
-%% Code 5-10 | 2D Integration (chebyshev grid recommanded)
-%            | +[ using tiq.m based on Code 5-9 ]
+% Code 5-10 | 2D Integration (chebyshev grid recommanded)
+%           | +[ using tiq.m based on Code 5-9 ]
 clc; clear
 x = sym('x'); y = sym('y');        %for validation
 f = (1-x^2).*sqrt(1-y.^2);         %function for validatoin
@@ -8,7 +8,7 @@ X = chebspace(-2,2,n(1));          %chebyshev grid
 Y = chebspace(-1,1,n(2));          %chebyshev grid
 [XX,YY] = ndgrid(X,Y);             %2D grid
 FF = eval(subs(f,{x,y},{XX,YY}));  %2D function numerical data
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 F = FF(:);
 Sx = tiq(X);
 Sy = tiq(Y);

@@ -1,11 +1,11 @@
-%% Code 3-5 | Band limited interpolation (uniform initial points)
+% Code 3-5 | Band limited interpolation (uniform initial points)
 clc; clear; close all
 x = sym('x');                   %for validation
 f = x/2*sin(x) ;                %function for validation
 X = linspace(-10,10,20);        %base points must be uniform
 Xi = linspace(-10,10,100);      %interpolation points
 F = eval(subs(f,X)).';          %function numerical data
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 X = X(:); Xi = Xi(:); h = X(2)-X(1);
 dX = bsxfun(@minus,Xi,X.');
 P = sin(pi*dX/h)./(pi*dX/h);        %Sinc Function

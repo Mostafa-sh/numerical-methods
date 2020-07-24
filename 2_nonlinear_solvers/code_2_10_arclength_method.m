@@ -1,4 +1,4 @@
-%% Code 2-10 | Pseudo Arc Length Method + [ using jac.m ]
+% Code 2-10 | Pseudo Arc Length Method + [ using jac.m ]
 clc; clear;
 f = @(x) [10*x(1)+0.4*x(2)^3-5*x(2)^2-x(3)*40
     0.4*x(1)^3-3*x(1)^2+10*x(2)-x(3)*15 ];  %{x(3) = parameter}
@@ -8,7 +8,7 @@ s = 0.5;                                %step size
 error = 1e-6;                           %tolerance
 newitr = 100;                           %maximum itration of Newton
 h = 0.01;                               % acobian increment
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 n = numel(X);
 for i = 1:newitr                    %Newton for first point
     Fx = f(X);

@@ -1,9 +1,9 @@
-%% Code 5-5 | Gauss-Legendre
+% Code 5-5 | Gauss-Legendre
 clc; clear
 n = 2:6;                                    %number of grid points
 a = 0; b = pi/2;                            %integration limits
 f = @(x) 2*pi*sqrt(1-(3/4)*(sin(x)).^2);    %function
-%Metod__________________________________________________________________
+%Method__________________________________________________________________
 nn = numel(n); I = zeros(1,nn);
 for i = 1:nn
     switch n(i)

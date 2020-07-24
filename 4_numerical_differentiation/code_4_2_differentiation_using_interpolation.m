@@ -1,4 +1,4 @@
-%% code 4-2 | Differentiation Using Interpolation (works for coarse grids)
+% code 4-2 | Differentiation Using Interpolation (works for coarse grids)
 clc; clear
 x = sym('x');                          %for validation
 f = x^2*sin(x)+exp(x);                 %function for validation
@@ -6,7 +6,7 @@ n = 17;
 X = linspace(-2,2,n);          
 F = eval(subs(f,X));                   %function numerical data
 r = 3;                                 %derivative order
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 I = 1:n-1; 
 B = bsxfun(@power,X(:),[0 I]); 
 P = sparse(I,I+1,I,n,n);

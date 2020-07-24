@@ -1,9 +1,9 @@
-%% Code 3-2a | Forward Newton Interpolaion
+% Code 3-2a | Forward Newton Interpolaion
 clc; clear; close all
 X = [1 1.4 1.6 1.9];                 %data points
 F = [7 18.9616 28.6336 49.2271].';   %data points for function values
 Xi = [1.1 1.5 1.8];                  %interpolation points
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 X = X(:); Xi = Xi(:);
 n = numel(X); m = numel(Xi);
 N = ones(n); Ni = ones(m,n);

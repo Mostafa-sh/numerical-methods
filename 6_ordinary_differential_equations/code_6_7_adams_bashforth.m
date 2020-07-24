@@ -1,5 +1,5 @@
 % Code 6-7 | Adams-Bashforth Method
-%           | +[ using runge_kutta.m based on Code 7-3,7-4 & 7-5 ]
+%          | +[ using runge_kutta.m based on Code 7-3,7-4 & 7-5 ]
 clc; clear; close all
 f = @(x,Y) [Y(2); -0.1*Y(2)-x];           %ODE
 Y = [0 1];                                %initial values
@@ -7,7 +7,7 @@ S = [0 2];                                %response span
 h = 0.25;                                 %domain increment
 r = 4;                                    %order of Runge Kutta method
 n = 4;                                    %order of Adams-Bashforth method
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 [xx,YY] = runge_kutta(f,Y,S(1)+[0,(n-1)*h],h,r);
 i = n;
 switch n

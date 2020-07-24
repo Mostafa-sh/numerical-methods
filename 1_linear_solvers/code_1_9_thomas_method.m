@@ -1,10 +1,10 @@
-%% Code 1-9 | Thomas Method (Tridiagonal Matrix Algorithm)
+% Code 1-9 | Thomas Method (Tridiagonal Matrix Algorithm)
 clc; clear
 U = [2 2 2 -2];
 D = [6 7 8 7 5];
 L = [-1 -2 3 3];
 B = [2 -3 4 -3 1]';
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 [n,m] = size(B);  X = zeros(n,m);
 U(1)   = U(1)/D(1);
 B(1,:) = B(1,:)/D(1);

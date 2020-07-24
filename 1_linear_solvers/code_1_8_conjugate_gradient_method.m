@@ -1,12 +1,12 @@
-%% Code 1-8 | Conjugate Gradient Method
-%           | (for symmetric and positive definative systems)
+% Code 1-8 | Conjugate Gradient Method
+%          | (for symmetric and positive definative systems)
 clc; clear
 A = [3 0 -1; 0 4 -2; -1 -2 5];
 B = [4; 10; -10];
 X = [0; 0; 0];
 error = 1e-4;
 itr = 20;
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 R = B-A*X; S = R;
 Tab(1,:) = [i, X(:).', norm(R)];        %for illustration
 for i = 1:itr

@@ -1,10 +1,10 @@
-%% Code 2-6 | Secant Method
+% Code 2-6 | Secant Method
 clc; clear
 f = @(x) (1+x)*exp(-x^2)-2*atan(x^2);   %function
 x = 0.5;
 error = 1e-5;
 itr = 20;                               %maximum itration
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 fx0 = f(x);
 h= 1e-3; dfdx = (f(x+h)-fx0)/h;
 for i = 1:itr

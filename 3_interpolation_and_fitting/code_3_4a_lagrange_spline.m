@@ -1,10 +1,10 @@
-%% Code 3-4a | Lagrange Spline
+% Code 3-4a | Lagrange Spline
 clc; clear; close all
 k = 3;                            %order of Spline 1,2,3
 X = [-0.2, -0.1, 0.2, 0.7, 1.5];  %data points
 F = [5.2, 3, 0.6, 0.4, 0.2].';    %data points
 Xi = linspace(X(1),X(end),30);    %interpolation points
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 n = numel(X);
 if k == 1
     B = speye(n); U = B;             %for the unity of the code

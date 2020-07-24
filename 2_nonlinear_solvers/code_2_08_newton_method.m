@@ -1,4 +1,4 @@
-%% Code 2-8 | Newton Method
+% Code 2-8 | Newton Method
 clc; clear
 f = @(x) [x(1)^3+(x(1)^2)*x(2)-x(1)*x(3)+6;     %function
     exp(x(1))+exp(x(2))-x(3);
@@ -7,7 +7,7 @@ X = [-1;-2;1];
 error = 1e-6;
 h = 1.e-5;                                      %jacobian increment
 itr = 100;
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 n = numel(X);
 Jac = zeros(n);
 for i = 1:itr

@@ -1,10 +1,10 @@
-%% Code 2-4 | Fixed-point Method
+% Code 2-4 | Fixed-point Method
 clc; clear
 g = @(x) sqrt(4 + sqrt(x));               %f(x) = g(x)-x
 x = 2;                                    %start point
 error = 1e-5;
 itr = 20;                                 %maximum itration
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 for i = 1:itr
     gx = g(x); fx = gx-x;
     Tab(i,:) = [i-1, x, fx];    %for illustration

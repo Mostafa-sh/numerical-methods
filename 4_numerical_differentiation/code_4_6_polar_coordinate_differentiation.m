@@ -1,16 +1,16 @@
-%% Code 4-6 | Polar Coordinate Differentiation +[ using periodspace.m,
-%           | +[using chebspace.m, gdq.m Code 4-3, periodiff.m Code 4-5]
+% Code 4-6 | Polar Coordinate Differentiation +[ using periodspace.m,
+%          | +[using chebspace.m, gdq.m Code 4-3, periodiff.m Code 4-5]
 clc; clear; close all
 r = sym('r'); t = sym('t');   %for validation
 f = sin(2*pi*r)*sin(t);       %function for validation
-n = [30 20];                  %number of grid points in [r theta] direction
+n = [30 20];                  %number of points in [r theta] (both even)
 C = chebspace(-1,1,n(1));     %chebyshev grid space
 T = periodspace(0,2*pi,n(2)); %priodic grid 
 R = C(n(1)/2+1:end);
 [RR,TT] = meshgrid(R,T);      %2D grid    
 FF = eval(subs(f,{r,t},{RR,TT})); 
 o = [2,3];                    %order of derivatives in [r theta] direction
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 Dr = gdq(C,o(1));             %GDQ differntiation operator
 Dt = periodiff(T,o(2));       %Periodic gird differntiation operator
 I = n(1)/2+1:n(1);

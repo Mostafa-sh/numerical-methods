@@ -5,7 +5,7 @@ Y = [0 1];                                %initial values
 S = [0 2];                                %response span
 h = 0.25;                                 %domain increment
 type = 'Ralston';
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 switch type
     case 'MEuler',   a2 = 1;   b21 = 1;   c1 = 1/2; c2 = 1/2;
     case 'Midpoint', a2 = 1/2; b21 = 1/2; c1 = 0;   c2 = 1;

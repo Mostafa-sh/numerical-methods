@@ -1,4 +1,4 @@
-%% Code 2-9 | Broyden Method
+% Code 2-9 | Broyden Method
 clc; clear
 f = @(x) [x(1)^3+(x(1)^2)*x(2)-x(1)*x(3)+6;    %function
     exp(x(1))+exp(x(2))-x(3);
@@ -6,7 +6,7 @@ f = @(x) [x(1)^3+(x(1)^2)*x(2)-x(1)*x(3)+6;    %function
 X = [-1; -2; 1];                               %satrt points
 error = 1e-3;
 itr = 100;
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 n = numel(X);
 Fx0 = f(X);
 Jac = zeros(n); h = 1e-5;

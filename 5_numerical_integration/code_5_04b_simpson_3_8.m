@@ -1,10 +1,10 @@
-%% Code 5-4b | Simpson 3/8 Rule (non-uniform; 3K+1 grid)
+% Code 5-4b | Simpson 3/8 Rule (non-uniform; 3K+1 grid)
 clc; clear
 x = sym('x');                           %for validation
 f = sqrt(4-x^2);                        %function for validation
 X = [0, 0.25, 0.75, 1, 1.25, 1.75, 2];  %non-uniform 3K+1, k>=1
 F = eval(subs(f,X));
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 n = numel(X); k = 4; m = (n-1)/3;
 O = ones(1,k);
 id = (1:k)'*ones(1,m)+O'*(0:(k-1):(k-1)*(m-1));

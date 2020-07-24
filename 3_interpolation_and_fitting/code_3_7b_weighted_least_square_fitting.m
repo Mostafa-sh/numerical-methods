@@ -1,10 +1,10 @@
-%% Code 3-7b | Weighted Least Square fitting
+% Code 3-7b | Weighted Least Square fitting
 clc; clear; close all
 X = [2 5 6 8 9 13];       %Data points
 Y = [7 8 10 11 12 14];    %Data points
 m = 5;                    %number of polynomial base functions <= numel(X)
 W = 1:numel(X);           %Weight of data
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 n = numel(X); X = X(:); Y = Y(:); W = W(:);
 B = bsxfun(@power,X,0:m-1);
 Bw = zeros(m);

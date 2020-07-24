@@ -1,12 +1,12 @@
-%% Code 3-6 | Periodic Interpolation (only periodic data)
-%           | +[ using periodspace.m ]
+% Code 3-6 | Periodic Interpolation (only periodic data)
+%          | +[ using periodspace.m ]
 clc; clear
 x = sym('x');                       %for validation
 f = sin(2*x)+cos(3*x);              %periodic function for validation
 X = periodspace(0,4*pi,20);         %peridic grid (on period span, even)
 Xi = periodspace(0,4*pi,80);        %peridic grid (on period span, even)
 F = eval(subs(f,X)).';              %periodic numerical data,must be even.
-%Metod__________________________________________________________________
+%Method_________________________________________________________________
 X = X(:); Xi = Xi(:); n = numel(X); m = numel(Xi);
 lx = n*(X(2)-X(1)); h = 2*pi/n;  k = 2*pi/lx;  %mapping
 dX = k*bsxfun(@minus,Xi,X.');
