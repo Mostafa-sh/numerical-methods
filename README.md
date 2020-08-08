@@ -5,13 +5,14 @@ This is a repository for a collection of numerical methods in MATLAB. The main f
 
 Each method is implemented in a single file with the following arrangement and is ready to execute in MATLAB.
 ~~~~
+%Name of the method
 part 1
 %Method_________________________________________________________________
 part 2
 %Illustration___________________________________________________________
 part 3
 ~~~~
-Part 1 contains some inputs, part 2 is the method, and part 3 contains an illustration of outputs, and in some cases, validation of the results and/or comparison with other methods.
+Part 1 contains some inputs, part 2 contains the steps of the method, and part 3 contains an illustration of outputs, and in some cases, validation of the results and/or comparison with other methods.
 
 For other projects, you can only use part 2 under "%Method___" and remove any other lines that commented at the end by "%for illustration", " %for validation", or "%for comparison".
 
